@@ -1,13 +1,20 @@
-from string import ascii_lowercase,ascii_uppercase,digits,punctuation 
-import random,os
+from string import ascii_lowercase,ascii_uppercase,punctuation,digits
 from colorama import Fore
-lower,upper,num  = [ascii_lowercase], [ascii_uppercase],[digits]
-len = int(input("Length of password: "))
+import random
+contents=list(ascii_lowercase+ascii_uppercase+digits+punctuation)
+password=[]
+
+length = int(input("len: "))
+for i in range(length):
+    password.append(random.choice(contents))
+random.shuffle(password)
+print(''.join(password))
 
 
-def gen_password(len,symbols=False,srength=''):
-    for i in len:
-        
+
+
+
+
 
 
 
